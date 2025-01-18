@@ -3,6 +3,7 @@ import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 //import 'package:myapp/ar.dart';
 import 'package:myapp/measure.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -66,7 +67,7 @@ class _ARCoreCheckerState extends State<ARCoreChecker> {
     }
 
     if (_isARCoreAvailable) {
-      return const AdvancedMeasureScreen ();
+      return MeasureScreen();
     } else {
       return Scaffold(
         appBar: AppBar(title: const Text("AR Not Supported")),
