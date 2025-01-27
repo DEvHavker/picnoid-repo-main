@@ -31,6 +31,10 @@ class _ARScreenState extends State<ARScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('AR Screen'),
+        leading: IconButton(
+          onPressed: Navigator.of(context).pop,
+          icon: const Icon(Icons.arrow_back)
+        ),
       ),
       body: Stack(
         children: [

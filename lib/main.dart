@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
+import 'package:myapp/home.dart';
 //import 'package:myapp/ar.dart';
-import 'package:myapp/measure.dart';
+//import 'package:myapp/measure.dart';
 
 
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -67,7 +69,7 @@ class _ARCoreCheckerState extends State<ARCoreChecker> {
     }
 
     if (_isARCoreAvailable) {
-      return MeasureScreen();
+      return  const HomePage();
     } else {
       return Scaffold(
         appBar: AppBar(title: const Text("AR Not Supported")),
