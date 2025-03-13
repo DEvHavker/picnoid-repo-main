@@ -22,6 +22,7 @@ class _ARScreenState extends State<ARScreen> {
     'models/bed.glb',
     'models/chair.glb',
     'models/table.glb',
+    'models/sofa.glb',
   ];
 
   String? selectedModel;

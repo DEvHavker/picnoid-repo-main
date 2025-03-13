@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
-import 'package:myapp/home.dart';
+import 'package:picnoid_ar_app/home.dart';
 //import 'package:myapp/ar.dart';
 //import 'package:myapp/measure.dart';
 

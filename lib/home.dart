@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/ar.dart';
-import 'package:myapp/measure.dart';
+import 'package:picnoid_ar_app/ar.dart';
+import 'package:picnoid_ar_app/measure.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -29,18 +29,34 @@ class HomePage extends StatelessWidget {
               context,
               Icons.chair,
               const Color.fromARGB(255, 86, 56, 45),
-              () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) =>  const ARScreen()),
-              ),
+              () {
+                try {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const ARScreen()),
+                  );
+                } catch (e) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Navigation error: $e')),
+                  );
+                }
+              },
             ),
             const SizedBox(height: 20),
             _buildIconButton(
               context,
               Icons.draw,
               const Color.fromARGB(255, 86, 56, 45),
-              () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => MeasureScreen()),
-              ),
+              () {
+                try {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => MeasureScreen()),
+                  );
+                } catch (e) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Navigation error: $e')),
+                  );
+                }
+              },
             ),
           ],
         ),
